@@ -21,7 +21,7 @@ export class NuevoUserPage implements OnInit {
 
   ngOnInit() {
   }
-  registrarContacto(){
+  registrarUsuario(){
     if(this.validateModel(this.usuario)){
         this.usuarioService.addUsuario(this.usuario.nombre.valueOf(),
           this.usuario.apellidos.valueOf(),
