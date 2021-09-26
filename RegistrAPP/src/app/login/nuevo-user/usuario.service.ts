@@ -12,6 +12,12 @@ export class UsuarioService {
       usuario: 'lenpardo',
       password: '123456'
     },
+    {
+      nombre: 'Marcelo',
+      apellidos:'Montecinos',
+      usuario: 'mmonte',
+      password: '123456'
+    },
 ];
   constructor() {
   }
@@ -23,6 +29,17 @@ export class UsuarioService {
     }
   addUsuario(nombre: string, apellidos: string, usuario: string, password: string)
   {
-   
+    this.listaUsuario.push(
+      {
+        nombre,
+        apellidos,
+        usuario,
+        password
+       }
+     );
+  }
+ deleteUsuario(User: string)
+ {
+   this.listaUsuario.filter(contacto => {return contacto.usuario !== User  });
   }
 }
